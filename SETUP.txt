@@ -1,0 +1,36 @@
+QR-Code Restoration — development environment
+
+Open qr-code-restoration.code-workspace in VS Code.
+Install the recommended Microsoft Python, Pylance, and Jupyter extensions.
+Use Command+Shift+P > Python: Select Interpreter and choose .venv/bin/python.
+For notebooks, select the Python environment in .venv as the kernel.
+
+In a new VS Code terminal, activate manually if needed:
+    source .venv/bin/activate
+
+Check environment consistency:
+    python --version
+    python -m pip check
+
+To recreate this environment on this platform with the same Python version:
+    python3 -m venv .venv
+    .venv/bin/python -m pip install -r requirements-lock.txt
+
+requirements.txt lists direct dependencies with their installed versions.
+requirements-lock.txt records all installed package versions for this Mac.
+Other platforms may require a separately resolved dependency set.
+
+Current synthetic-defocus workflow (run from the project root):
+    python -m src.generation.generate_qr
+    python -m src.generation.blur_qr
+    python -m src.classical.richardson_lucy
+    python -m src.evaluation.evaluate_qr
+
+The generation and restoration commands overwrite matching generated images.
+The current evaluator prints restored-image decoding outcomes to the terminal.
+Results in results/ are preliminary records; see each file for its scope.
+Original photographs, neural training, and physical PSF calibration remain
+future project work.
+
+If moving the project, recreate .venv at its final location; virtual
+environments contain absolute paths and should not be copied between locations.
