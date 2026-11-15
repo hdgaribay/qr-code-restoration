@@ -16,7 +16,7 @@ with metadata_path.open(newline="", encoding="utf-8") as file:
 
 # Search only the iteration folders.
 image_paths = sorted(
-    input_dir.glob("iter_*/qr_*_blur_r*_rl.png")
+    input_dir.glob("iter_*/qr_*/r*/qr_*_blur_r*_rl.png")
 )
 
 decoder = cv2.QRCodeDetector()
@@ -27,7 +27,7 @@ if not image_paths:
     print(f"No matching images found in: {input_dir.resolve()}")
 
 for image_path in image_paths:
-    iteration_folder = image_path.parent.name
+    iteration_folder = image_path.relative_to(input_dir).parts[0]
 
     # Example: qr_0002_blur_r9_rl.png -> qr_0002
     qr_id = image_path.stem.split("_blur_r", 1)[0]

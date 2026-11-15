@@ -10,16 +10,20 @@ from src.generation.defocus import disk_psf
 iterations = [5,10,20,40]  
 
 input_dir = Path("images") / "blurred"
-image_paths = sorted(input_dir.glob("qr_00**_blur_r*.png"))
+image_paths = sorted(input_dir.glob("qr_*/r*/qr_*_blur_r*.png"))
 
 print("Searching in:", input_dir.resolve())
 print("Images found:", len(image_paths))
 for num_iterations in iterations:
     for image_path in image_paths:
-        output_dir = Path("images") / "rl_deconv" / f"iter_{num_iterations}"
-        output_dir.mkdir(parents=True, exist_ok=True)
         # Example: qr_0001_blur_r9.png -> radius 9
         radius = int(image_path.stem.rsplit("_r", 1)[1])
+        qr_id = image_path.stem.split("_blur_r", 1)[0]
+        output_dir = (
+            Path("images") / "rl_deconv" / f"iter_{num_iterations}"
+            / qr_id / f"r{radius}"
+        )
+        output_dir.mkdir(parents=True, exist_ok=True)
 
         blurred = np.asarray(
             Image.open(image_path).convert("L"),

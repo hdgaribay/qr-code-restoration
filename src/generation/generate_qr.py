@@ -12,6 +12,8 @@ metadata = []
 for number in range(1, 21):
     qr_id = f"qr_{number:04d}"
     payload = f"ECE253-QR-{number:04d}"
+    identity_dir = output_dir / qr_id
+    identity_dir.mkdir(parents=True, exist_ok=True)
 
     qr = qrcode.QRCode(
         version=1,
@@ -24,12 +26,12 @@ for number in range(1, 21):
     qr.make(fit=False)  # Keep version 1 fixed.
 
     img = qr.make_image(fill_color="black", back_color="white")
-    image_path = output_dir / f"{qr_id}.png"
+    image_path = identity_dir / f"{qr_id}.png"
     img.save(image_path)
 
     # Includes the border; True means black.
     modules = np.asarray(qr.get_matrix(), dtype=bool)
-    module_path = output_dir / f"{qr_id}_modules.npy"
+    module_path = identity_dir / f"{qr_id}_modules.npy"
     np.save(module_path, modules)
 
     metadata.append({

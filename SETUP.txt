@@ -28,6 +28,12 @@ Current synthetic-defocus workflow (run from the project root):
 
 The generation and restoration commands overwrite matching generated images.
 The current evaluator prints restored-image decoding outcomes to the terminal.
+Image organization:
+    images/clean/qr_0001/qr_0001.png
+    images/clean/qr_0001/qr_0001_modules.npy
+    images/blurred/qr_0001/r7/qr_0001_blur_r7.png
+    images/rl_deconv/iter_20/qr_0001/r7/qr_0001_blur_r7_rl.png
+The shared payload manifest remains at images/clean/metadata.csv.
 Results in results/ are preliminary records; see each file for its scope.
 Original photographs, neural training, and physical PSF calibration remain
 future project work.

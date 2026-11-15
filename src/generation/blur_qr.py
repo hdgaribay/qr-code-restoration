@@ -11,7 +11,7 @@ input_dir = Path("images") / "clean"
 output_dir = Path("images") / "blurred"
 output_dir.mkdir(parents=True, exist_ok=True)
 
-image_paths = sorted(input_dir.glob("qr_[0-9][0-9][0-9][0-9].png"))
+image_paths = sorted(input_dir.glob("qr_*/qr_[0-9][0-9][0-9][0-9].png"))
 radii = np.arange(7, 13)
 
 if not image_paths:
@@ -42,7 +42,9 @@ for image_path in image_paths:
             np.clip(blurred, 0.0, 1.0) * 255
         ).round().astype(np.uint8)
 
-        output_path = output_dir / f"{qr_id}_blur_r{radius}.png"
+        radius_dir = output_dir / qr_id / f"r{radius}"
+        radius_dir.mkdir(parents=True, exist_ok=True)
+        output_path = radius_dir / f"{qr_id}_blur_r{radius}.png"
         Image.fromarray(blurred_uint8).save(output_path)
 
         print(f"Saved: {output_path}")
