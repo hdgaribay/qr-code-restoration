@@ -1,0 +1,4 @@
+model,step,train_loss,validation_loss,weighted_loss,learning_rate,device,elapsed_seconds,seed
+stage1_all_structure_weighted,40,0.2709953784942627,0.2516208749158042,True,0.001,cpu,56.49294900894165,253112026
+stage1_all_structure_weighted,80,0.17857249081134796,0.1771885714360646,True,0.001,cpu,118.59701800346375,253112026
+stage1_all_structure_weighted,120,0.11901676654815674,0.12486643769911357,True,0.001,cpu,177.25560188293457,253112026

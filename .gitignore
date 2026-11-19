@@ -11,3 +11,18 @@ environment-check.json
 *.pt
 *.pth
 *.ckpt
+# Allow Artifact B reproducibility assets
+!artifact_b/data/
+!artifact_b/data/**
+
+!artifact_b/**/data/
+!artifact_b/**/data/**
+
+!artifact_b/models/
+!artifact_b/models/**
+!artifact_b/**/models/
+!artifact_b/**/models/**
+
+!artifact_b/**/*.pt
+!artifact_b/**/*.npz
+!artifact_b/**/*.npy

@@ -1,0 +1,14 @@
+{
+  "seed": 253112026,
+  "new_training_qr_identities_total": 4000,
+  "new_training_qr_identities_per_regime": 2000,
+  "new_validation_qr_identities": 200,
+  "single_training_pairs": 6000,
+  "all_training_pairs": 6000,
+  "stage1_validation_pairs": 1400,
+  "single_training_categories": "S,D,G only",
+  "all_training_categories": "S,D,G,SD,SG,DG,SDG balanced by identity/seed",
+  "payload_overlap_protected_existing_validation_test": 0,
+  "payload_overlap_new_train_val": 0,
+  "generation_seconds": 96.32577109336853
+}

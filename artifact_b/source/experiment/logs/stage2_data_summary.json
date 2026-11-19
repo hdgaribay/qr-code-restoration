@@ -1,0 +1,17 @@
+{
+  "training_synthetic_images_expected": 940,
+  "validation_synthetic_images_expected": 220,
+  "training_pairs_usable": 693,
+  "validation_pairs_geometry_valid": 213,
+  "training_identities_used": 36,
+  "validation_identities": 10,
+  "test_identity_image_bytes_read": 0,
+  "train_clean_matrices_dual_decoder_verified": 37,
+  "validation_clean_matrices_dual_decoder_verified": 11,
+  "training_ids_match_locked_split": true,
+  "validation_ids_match_locked_split": true,
+  "train_geometry_skips": 247,
+  "validation_geometry_skips": 7,
+  "pair_target": "same capture-group clean photo straight_qrcode matrix, verified by independent OpenCV and ZXing payload matches, rendered into each input-only detector ROI",
+  "warning": "Target is a clean-reference sampled matrix; no independent pixel-aligned clean photograph is available."
+}
