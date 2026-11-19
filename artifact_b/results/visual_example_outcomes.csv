@@ -1,0 +1,5 @@
+display_case,identity_id,image_number,condition,severity_level,geometry_ok,paired_clean_reference,RAW_exact_decode,RAW_false_decode,CLASSICAL_ORIG_exact_decode,CLASSICAL_ORIG_false_decode,QR_AWARE_exact_decode,QR_AWARE_false_decode,STAGE1_ALL_STANDARD_exact_decode,STAGE1_ALL_STANDARD_false_decode,UNET_ALL_STANDARD_exact_decode,UNET_ALL_STANDARD_false_decode,UNET_ALL_STRUCTURE_WEIGHTED_exact_decode,UNET_ALL_STRUCTURE_WEIGHTED_false_decode,REPAIR_SINGLE_exact_decode,REPAIR_SINGLE_false_decode,REPAIR_ALL_exact_decode,REPAIR_ALL_false_decode,REPAIR_ALL_WEIGHTED_exact_decode,REPAIR_ALL_WEIGHTED_false_decode
+recovery,QR92381ECF2E,771,Clean,3,True,matrix content checked only; pixel alignment not established,0,0,1,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0
+regression,QR8345D70353,624,Clean,3,True,matrix content checked only; pixel alignment not established,1,0,1,0,1,0,0,0,0,0,1,0,1,0,1,0,1,0
+unchanged_success,QR0A440DECF7,694,Clean,2,True,matrix content checked only; pixel alignment not established,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0
+failure,QR8345D70353,624,Clean,4,True,matrix content checked only; pixel alignment not established,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

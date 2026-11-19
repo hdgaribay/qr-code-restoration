@@ -1,0 +1,15 @@
+{
+  "training_synthetic_images_expected": 940,
+  "validation_synthetic_images_expected": 220,
+  "training_pairs_usable": 884,
+  "validation_pairs_geometry_valid": 213,
+  "training_identities_used": 45,
+  "validation_identities": 10,
+  "test_identity_image_bytes_read": 0,
+  "training_ids_match_locked_split": true,
+  "validation_ids_match_locked_split": true,
+  "train_geometry_skips": 56,
+  "validation_geometry_skips": 7,
+  "pair_target": "payload-derived exact module matrix rendered into the input-only detector rectified 4-module-quiet-zone ROI",
+  "warning": "The original captures may contain residual artifacts; the target is an ideal payload matrix, not a pixel-aligned clean photograph."
+}

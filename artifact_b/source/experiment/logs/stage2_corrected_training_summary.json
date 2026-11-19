@@ -1,0 +1,17 @@
+{
+  "single_standard": {
+    "best_checkpoint": "experiment/models/stage2_single_standard_best.pt",
+    "best_step": 120,
+    "initial_checkpoint": "experiment/models/stage1_single_standard_best.pt"
+  },
+  "all_standard": {
+    "best_checkpoint": "experiment/models/stage2_all_standard_best.pt",
+    "best_step": 120,
+    "initial_checkpoint": "experiment/models/stage1_all_standard_best.pt"
+  },
+  "all_structure_weighted": {
+    "best_checkpoint": "experiment/models/stage2_all_structure_weighted_best.pt",
+    "best_step": 120,
+    "initial_checkpoint": "experiment/models/stage1_all_structure_weighted_best.pt"
+  }
+}

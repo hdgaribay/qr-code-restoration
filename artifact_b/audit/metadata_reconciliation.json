@@ -1,0 +1,69 @@
+{
+  "historical_corrected_summary": {
+    "single_standard": {
+      "best_checkpoint": "experiment/models/stage2_single_standard_best.pt",
+      "best_step": 120,
+      "initial_checkpoint": "experiment/models/stage1_single_standard_best.pt"
+    },
+    "all_standard": {
+      "best_checkpoint": "experiment/models/stage2_all_standard_best.pt",
+      "best_step": 120,
+      "initial_checkpoint": "experiment/models/stage1_all_standard_best.pt"
+    },
+    "all_structure_weighted": {
+      "best_checkpoint": "experiment/models/stage2_all_structure_weighted_best.pt",
+      "best_step": 120,
+      "initial_checkpoint": "experiment/models/stage1_all_structure_weighted_best.pt"
+    }
+  },
+  "final_summary": {
+    "stage1_single_standard": {
+      "checkpoint": "experiment/models/stage1_single_standard_best.pt",
+      "best_step": 240
+    },
+    "stage1_all_standard": {
+      "checkpoint": "experiment/models/stage1_all_standard_best.pt",
+      "best_step": 240
+    },
+    "stage1_all_structure_weighted": {
+      "checkpoint": "experiment/models/stage1_all_structure_weighted_best.pt",
+      "best_step": 240
+    },
+    "stage2_single_standard": {
+      "checkpoint": "experiment/models/stage2_single_standard_best.pt",
+      "best_step": 240
+    },
+    "stage2_all_standard": {
+      "checkpoint": "experiment/models/stage2_all_standard_best.pt",
+      "best_step": 240
+    },
+    "stage2_all_structure_weighted": {
+      "checkpoint": "experiment/models/stage2_all_structure_weighted_best.pt",
+      "best_step": 240
+    }
+  },
+  "actual_checkpoint_metadata": {
+    "UNET_SINGLE_STANDARD": {
+      "step": 240,
+      "validation_loss": 0.49861349993281895,
+      "seed_field": 253112026,
+      "training_log_run_seed": "253112228",
+      "training_log_best_step": "240"
+    },
+    "UNET_ALL_STANDARD": {
+      "step": 240,
+      "validation_loss": 0.5011355181535085,
+      "seed_field": 253112026,
+      "training_log_run_seed": "253112228",
+      "training_log_best_step": "240"
+    },
+    "UNET_ALL_STRUCTURE_WEIGHTED": {
+      "step": 240,
+      "validation_loss": 0.654419086597584,
+      "seed_field": 253112026,
+      "training_log_run_seed": "253112228",
+      "training_log_best_step": "240"
+    }
+  },
+  "finding": "stage2_corrected_training_summary.json is stale: it records 120 steps while the final stage2 checkpoint metadata and final training logs show step 240. The checkpoint seed field stores the base data seed 253112026; the training log records actual Stage 2 run seed 253112228. The final Stage 2 all-standard checkpoint was selected at step 240 with validation loss 0.5011355; weighted branch uses a different loss objective and starts from the weighted Stage 1 checkpoint, so the historical H2 is not an isolated loss ablation."
+}

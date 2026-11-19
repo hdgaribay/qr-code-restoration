@@ -1,0 +1,28 @@
+{
+  "base_seed": 7253325,
+  "train_matrix_target_units": 37,
+  "source_train_identity_count": 36,
+  "train_pairs_per_arm": 1776,
+  "validation_identity_count": 200,
+  "validation_pairs": 2400,
+  "severity_levels": {
+    "2": 0.5,
+    "3": 0.3,
+    "4": 0.2
+  },
+  "conditions": [
+    "S",
+    "DS",
+    "SG",
+    "DSG"
+  ],
+  "matched_identity_pool": true,
+  "matched_pairs_per_arm": true,
+  "matched_steps": 240,
+  "architecture": "4-scale Compact U-Net 16/32/64/128",
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "validation_selection": "Stage 1 pre-existing 200 synthetic validation identities, regenerated with known digital geometry; no Stage2 pixels used for pixel loss selection",
+  "train_source": "37 unique capture-group/matrix targets derived only from the 36 audited existing Stage2 training identities; original photo bytes not read",
+  "target_alignment": "known shared digital transform matrix applied to target and degraded input; target pixel grid exact"
+}

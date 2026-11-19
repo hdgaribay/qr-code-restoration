@@ -1,0 +1,4 @@
+model,step,train_loss,validation_loss,weighted_loss,learning_rate,seed,initial_checkpoint,pairs,validation_pairs,elapsed_seconds
+repair_stage2_all,80,0.06766640394926071,0.06422452099621295,False,0.0001,7253425,source/experiment/models/stage1_all_standard_best.pt,1776,2400,143.76961183547974
+repair_stage2_all,160,0.0037299050018191338,0.002676640566593657,False,0.0001,7253425,source/experiment/models/stage1_all_standard_best.pt,1776,2400,277.0736985206604
+repair_stage2_all,240,0.0041097309440374374,0.0019479741582957408,False,0.0001,7253425,source/experiment/models/stage1_all_standard_best.pt,1776,2400,415.60568404197693
